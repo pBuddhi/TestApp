@@ -1,0 +1,10 @@
+target/
+/bin
+aa.iml
+aa.ipr
+aa.iws
+*.iml
+*.ipr
+*.iws
+/m
+*.log
