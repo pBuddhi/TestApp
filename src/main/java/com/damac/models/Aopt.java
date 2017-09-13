@@ -3,6 +3,8 @@ package com.damac.models;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
+
+
 public class Aopt implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
@@ -14,46 +16,46 @@ public class Aopt implements java.io.Serializable {
 	private java.lang.String projectCity;
 	private java.lang.String unitType;
 	private java.lang.String permittedUse;
-	private java.lang.Boolean eho;
-	private java.lang.Boolean dispute;
-	private java.lang.Boolean enforcement;
-	private java.lang.Boolean litigation;
+	private boolean eho;
+	private boolean dispute;
+	private boolean enforcement;
+	private boolean litigation;
 	private java.lang.String project;
 	private java.lang.String buildingCode;
 	private java.lang.String bedroomType;
-	private java.lang.Boolean ho;
+	private boolean ho;
 	private java.lang.String applicableNationality;
-	private java.lang.Boolean bulk;
+	private boolean bulk;
 	private java.lang.String originalPaymentPlanType;
 	private java.lang.String proposedPaymentPlanType;
-	private java.lang.Boolean paymentsEquallyDistributed;
-	private java.lang.Boolean paymentPlanExtendedBeyondAcd;
+	private boolean paymentsEquallyDistributed;
+	private boolean paymentPlanExtendedBeyondAcd;
 	private java.lang.String tempFive;
 	private java.lang.String tempSix;
-	private java.lang.Boolean defaultVal;
+	private boolean defaultVal;
 	private java.lang.String previousWaivers;
-	private java.lang.Integer currentConstructionStatusCompletePercentage;
-	private java.lang.Integer currentReraConstructionStatusCompletePercentage;
-	private java.lang.Integer delayExpectedFromOriginalAcdDays;
-	private java.lang.Integer portfolioValue;
-	private java.lang.Integer areaVariationPercentage;
-	private java.lang.Integer otherRecharges;
-	private java.lang.Integer percOverdue;
-	private java.lang.Integer numberOfTimesCustomerHasDefaultedOnInstallments;
-	private java.lang.Integer percPdcCoverageOrPertPaymentPaidWhicheverIsHigher;
-	private java.lang.Integer differencePaymentAndReraPercentage;
-	private java.lang.Integer completionInstallmentPrecProposedPlan;
-	private java.lang.Integer diffCurAcdAndLastNonCompletionInstallmentInProposedPlan;
-	private java.lang.Integer diffCurAcdAndLastPaymentMilestoneInProposedPlan;
-	private java.lang.Integer maximumMovementInAnInstallmentDays;
-	private java.lang.Integer numberOfInstallmentsMoved;
-	private java.lang.Integer furniturePaymentPlanDelayMonths;
-	private java.lang.Integer differenceBetweenCurrentAcdAndAoptDateDays;
-	private java.lang.Double tempOne;
-	private java.lang.Double tempTwo;
-	private java.lang.Double tempThree;
-	private java.lang.Double tempFour;
-	private java.lang.String priorAopt;
+	private int currentConstructionStatusCompletePercentage;
+	private int currentReraConstructionStatusCompletePercentage;
+	private int delayExpectedFromOriginalAcdDays;
+	private int portfolioValue;
+	private int areaVariationPercentage;
+	private int otherRecharges;
+	private int percOverdue;
+	private int numberOfTimesCustomerHasDefaultedOnInstallments;
+	private int percPdcCoverageOrPertPaymentPaidWhicheverIsHigher;
+	private int differencePaymentAndReraPercentage;
+	private int completionInstallmentPrecProposedPlan;
+	private int diffCurAcdAndLastNonCompletionInstallmentInProposedPlan;
+	private int diffCurAcdAndLastPaymentMilestoneInProposedPlan;
+	private int maximumMovementInAnInstallmentDays;
+	private int numberOfInstallmentsMoved;
+	private int furniturePaymentPlanDelayMonths;
+	private int differenceBetweenCurrentAcdAndAoptDateDays;
+	private double tempOne;
+	private double tempTwo;
+	private double tempThree;
+	private double tempFour;
+	private boolean priorAopt;
 
 	// Drool ACTION variable
 	private java.lang.String allowed;
@@ -65,7 +67,7 @@ public class Aopt implements java.io.Serializable {
 	private java.lang.String firstApprovingAuthority;
 	private java.lang.String secondApprovingAuthority;
 	private java.lang.String thirdApprovingAuthority;
-	private java.lang.Double paymentDpPercentage;
+	private java.lang.String paymentDpPercentage;
 	private java.lang.String paymentGateOne;
 	private java.lang.String paymentGateTwo;
 	private java.lang.String paymentGateThree;
@@ -74,20 +76,20 @@ public class Aopt implements java.io.Serializable {
 	private java.lang.String paymentGateSix;
 	private java.lang.String paymentGateSeven;
 	private java.lang.String paymentGateOneDate;
-	private java.lang.Integer paymentGateOnePercentage;
+	private java.lang.String paymentGateOnePercentage;
 	private java.lang.String paymentGateTwoDate;
-	private java.lang.Integer paymentGateTwoPercentage;
+	private java.lang.String paymentGateTwoPercentage;
 	private java.lang.String paymentGateThreeDate;
-	private java.lang.Integer paymentGateThreePercentage;
+	private java.lang.String paymentGateThreePercentage;
 	private java.lang.String paymentGateFourDate;
-	private java.lang.Integer paymentGateFourPercentage;
-	private java.lang.Integer paymentGateCompletionPercentage;
+	private java.lang.String paymentGateFourPercentage;
+	private java.lang.String paymentGateCompletionPercentage;
 	private java.lang.String paymentGateFiveDate;
-	private java.lang.Integer paymentGateFivePercentage;
+	private java.lang.String paymentGateFivePercentage;
 	private java.lang.String paymentGateSixDate;
-	private java.lang.Integer paymentGateSixPercentage;
+	private java.lang.String paymentGateSixPercentage;
 	private java.lang.String paymentGateSevenDate;
-	private java.lang.Integer paymentGateSevenPercentage;
+	private java.lang.String paymentGateSevenPercentage;
 
 	public Aopt(){
 		
@@ -149,35 +151,35 @@ public class Aopt implements java.io.Serializable {
 		this.permittedUse = permittedUse;
 	}
 
-	public java.lang.Boolean getEho() {
+	public boolean isEho() {
 		return eho;
 	}
 
-	public void setEho(java.lang.Boolean eho) {
+	public void setEho(boolean eho) {
 		this.eho = eho;
 	}
 
-	public java.lang.Boolean getDispute() {
+	public boolean isDispute() {
 		return dispute;
 	}
 
-	public void setDispute(java.lang.Boolean dispute) {
+	public void setDispute(boolean dispute) {
 		this.dispute = dispute;
 	}
 
-	public java.lang.Boolean getEnforcement() {
+	public boolean isEnforcement() {
 		return enforcement;
 	}
 
-	public void setEnforcement(java.lang.Boolean enforcement) {
+	public void setEnforcement(boolean enforcement) {
 		this.enforcement = enforcement;
 	}
 
-	public java.lang.Boolean getLitigation() {
+	public boolean isLitigation() {
 		return litigation;
 	}
 
-	public void setLitigation(java.lang.Boolean litigation) {
+	public void setLitigation(boolean litigation) {
 		this.litigation = litigation;
 	}
 
@@ -205,11 +207,11 @@ public class Aopt implements java.io.Serializable {
 		this.bedroomType = bedroomType;
 	}
 
-	public java.lang.Boolean getHo() {
+	public boolean isHo() {
 		return ho;
 	}
 
-	public void setHo(java.lang.Boolean ho) {
+	public void setHo(boolean ho) {
 		this.ho = ho;
 	}
 
@@ -221,11 +223,11 @@ public class Aopt implements java.io.Serializable {
 		this.applicableNationality = applicableNationality;
 	}
 
-	public java.lang.Boolean getBulk() {
+	public boolean isBulk() {
 		return bulk;
 	}
 
-	public void setBulk(java.lang.Boolean bulk) {
+	public void setBulk(boolean bulk) {
 		this.bulk = bulk;
 	}
 
@@ -245,19 +247,19 @@ public class Aopt implements java.io.Serializable {
 		this.proposedPaymentPlanType = proposedPaymentPlanType;
 	}
 
-	public java.lang.Boolean getPaymentsEquallyDistributed() {
+	public boolean isPaymentsEquallyDistributed() {
 		return paymentsEquallyDistributed;
 	}
 
-	public void setPaymentsEquallyDistributed(java.lang.Boolean paymentsEquallyDistributed) {
+	public void setPaymentsEquallyDistributed(boolean paymentsEquallyDistributed) {
 		this.paymentsEquallyDistributed = paymentsEquallyDistributed;
 	}
 
-	public java.lang.Boolean getPaymentPlanExtendedBeyondAcd() {
+	public boolean isPaymentPlanExtendedBeyondAcd() {
 		return paymentPlanExtendedBeyondAcd;
 	}
 
-	public void setPaymentPlanExtendedBeyondAcd(java.lang.Boolean paymentPlanExtendedBeyondAcd) {
+	public void setPaymentPlanExtendedBeyondAcd(boolean paymentPlanExtendedBeyondAcd) {
 		this.paymentPlanExtendedBeyondAcd = paymentPlanExtendedBeyondAcd;
 	}
 
@@ -277,11 +279,11 @@ public class Aopt implements java.io.Serializable {
 		this.tempSix = tempSix;
 	}
 
-	public java.lang.Boolean getDefaultVal() {
+	public boolean isDefaultVal() {
 		return defaultVal;
 	}
 
-	public void setDefaultVal(java.lang.Boolean defaultVal) {
+	public void setDefaultVal(boolean defaultVal) {
 		this.defaultVal = defaultVal;
 	}
 
@@ -293,184 +295,181 @@ public class Aopt implements java.io.Serializable {
 		this.previousWaivers = previousWaivers;
 	}
 
-	public java.lang.Integer getCurrentConstructionStatusCompletePercentage() {
+	public int getCurrentConstructionStatusCompletePercentage() {
 		return currentConstructionStatusCompletePercentage;
 	}
 
-	public void setCurrentConstructionStatusCompletePercentage(java.lang.Integer currentConstructionStatusCompletePercentage) {
+	public void setCurrentConstructionStatusCompletePercentage(int currentConstructionStatusCompletePercentage) {
 		this.currentConstructionStatusCompletePercentage = currentConstructionStatusCompletePercentage;
 	}
 
-	public java.lang.Integer getCurrentReraConstructionStatusCompletePercentage() {
+	public int getCurrentReraConstructionStatusCompletePercentage() {
 		return currentReraConstructionStatusCompletePercentage;
 	}
 
-	public void setCurrentReraConstructionStatusCompletePercentage(
-			java.lang.Integer currentReraConstructionStatusCompletePercentage) {
+	public void setCurrentReraConstructionStatusCompletePercentage(int currentReraConstructionStatusCompletePercentage) {
 		this.currentReraConstructionStatusCompletePercentage = currentReraConstructionStatusCompletePercentage;
 	}
 
-	public java.lang.Integer getDelayExpectedFromOriginalAcdDays() {
+	public int getDelayExpectedFromOriginalAcdDays() {
 		return delayExpectedFromOriginalAcdDays;
 	}
 
-	public void setDelayExpectedFromOriginalAcdDays(java.lang.Integer delayExpectedFromOriginalAcdDays) {
+	public void setDelayExpectedFromOriginalAcdDays(int delayExpectedFromOriginalAcdDays) {
 		this.delayExpectedFromOriginalAcdDays = delayExpectedFromOriginalAcdDays;
 	}
 
-	public java.lang.Integer getPortfolioValue() {
+	public int getPortfolioValue() {
 		return portfolioValue;
 	}
 
-	public void setPortfolioValue(java.lang.Integer portfolioValue) {
+	public void setPortfolioValue(int portfolioValue) {
 		this.portfolioValue = portfolioValue;
 	}
 
-	public java.lang.Integer getAreaVariationPercentage() {
+	public int getAreaVariationPercentage() {
 		return areaVariationPercentage;
 	}
 
-	public void setAreaVariationPercentage(java.lang.Integer areaVariationPercentage) {
+	public void setAreaVariationPercentage(int areaVariationPercentage) {
 		this.areaVariationPercentage = areaVariationPercentage;
 	}
 
-	public java.lang.Integer getOtherRecharges() {
+	public int getOtherRecharges() {
 		return otherRecharges;
 	}
 
-	public void setOtherRecharges(java.lang.Integer otherRecharges) {
+	public void setOtherRecharges(int otherRecharges) {
 		this.otherRecharges = otherRecharges;
 	}
 
-	public java.lang.Integer getPercOverdue() {
+	public int getPercOverdue() {
 		return percOverdue;
 	}
 
-	public void setPercOverdue(java.lang.Integer percOverdue) {
+	public void setPercOverdue(int percOverdue) {
 		this.percOverdue = percOverdue;
 	}
 
-	public java.lang.Integer getNumberOfTimesCustomerHasDefaultedOnInstallments() {
+	public int getNumberOfTimesCustomerHasDefaultedOnInstallments() {
 		return numberOfTimesCustomerHasDefaultedOnInstallments;
 	}
 
-	public void setNumberOfTimesCustomerHasDefaultedOnInstallments(
-			java.lang.Integer numberOfTimesCustomerHasDefaultedOnInstallments) {
+	public void setNumberOfTimesCustomerHasDefaultedOnInstallments(int numberOfTimesCustomerHasDefaultedOnInstallments) {
 		this.numberOfTimesCustomerHasDefaultedOnInstallments = numberOfTimesCustomerHasDefaultedOnInstallments;
 	}
 
-	public java.lang.Integer getPercPdcCoverageOrPertPaymentPaidWhicheverIsHigher() {
+	public int getPercPdcCoverageOrPertPaymentPaidWhicheverIsHigher() {
 		return percPdcCoverageOrPertPaymentPaidWhicheverIsHigher;
 	}
 
 	public void setPercPdcCoverageOrPertPaymentPaidWhicheverIsHigher(
-			java.lang.Integer percPdcCoverageOrPertPaymentPaidWhicheverIsHigher) {
+			int percPdcCoverageOrPertPaymentPaidWhicheverIsHigher) {
 		this.percPdcCoverageOrPertPaymentPaidWhicheverIsHigher = percPdcCoverageOrPertPaymentPaidWhicheverIsHigher;
 	}
 
-	public java.lang.Integer getDifferencePaymentAndReraPercentage() {
+	public int getDifferencePaymentAndReraPercentage() {
 		return differencePaymentAndReraPercentage;
 	}
 
-	public void setDifferencePaymentAndReraPercentage(java.lang.Integer differencePaymentAndReraPercentage) {
+	public void setDifferencePaymentAndReraPercentage(int differencePaymentAndReraPercentage) {
 		this.differencePaymentAndReraPercentage = differencePaymentAndReraPercentage;
 	}
 
-	public java.lang.Integer getCompletionInstallmentPrecProposedPlan() {
+	public int getCompletionInstallmentPrecProposedPlan() {
 		return completionInstallmentPrecProposedPlan;
 	}
 
-	public void setCompletionInstallmentPrecProposedPlan(java.lang.Integer completionInstallmentPrecProposedPlan) {
+	public void setCompletionInstallmentPrecProposedPlan(int completionInstallmentPrecProposedPlan) {
 		this.completionInstallmentPrecProposedPlan = completionInstallmentPrecProposedPlan;
 	}
 
-	public java.lang.Integer getDiffCurAcdAndLastNonCompletionInstallmentInProposedPlan() {
+	public int getDiffCurAcdAndLastNonCompletionInstallmentInProposedPlan() {
 		return diffCurAcdAndLastNonCompletionInstallmentInProposedPlan;
 	}
 
 	public void setDiffCurAcdAndLastNonCompletionInstallmentInProposedPlan(
-			java.lang.Integer diffCurAcdAndLastNonCompletionInstallmentInProposedPlan) {
+			int diffCurAcdAndLastNonCompletionInstallmentInProposedPlan) {
 		this.diffCurAcdAndLastNonCompletionInstallmentInProposedPlan = diffCurAcdAndLastNonCompletionInstallmentInProposedPlan;
 	}
 
-	public java.lang.Integer getDiffCurAcdAndLastPaymentMilestoneInProposedPlan() {
+	public int getDiffCurAcdAndLastPaymentMilestoneInProposedPlan() {
 		return diffCurAcdAndLastPaymentMilestoneInProposedPlan;
 	}
 
-	public void setDiffCurAcdAndLastPaymentMilestoneInProposedPlan(
-			java.lang.Integer diffCurAcdAndLastPaymentMilestoneInProposedPlan) {
+	public void setDiffCurAcdAndLastPaymentMilestoneInProposedPlan(int diffCurAcdAndLastPaymentMilestoneInProposedPlan) {
 		this.diffCurAcdAndLastPaymentMilestoneInProposedPlan = diffCurAcdAndLastPaymentMilestoneInProposedPlan;
 	}
 
-	public java.lang.Integer getMaximumMovementInAnInstallmentDays() {
+	public int getMaximumMovementInAnInstallmentDays() {
 		return maximumMovementInAnInstallmentDays;
 	}
 
-	public void setMaximumMovementInAnInstallmentDays(java.lang.Integer maximumMovementInAnInstallmentDays) {
+	public void setMaximumMovementInAnInstallmentDays(int maximumMovementInAnInstallmentDays) {
 		this.maximumMovementInAnInstallmentDays = maximumMovementInAnInstallmentDays;
 	}
 
-	public java.lang.Integer getNumberOfInstallmentsMoved() {
+	public int getNumberOfInstallmentsMoved() {
 		return numberOfInstallmentsMoved;
 	}
 
-	public void setNumberOfInstallmentsMoved(java.lang.Integer numberOfInstallmentsMoved) {
+	public void setNumberOfInstallmentsMoved(int numberOfInstallmentsMoved) {
 		this.numberOfInstallmentsMoved = numberOfInstallmentsMoved;
 	}
 
-	public java.lang.Integer getFurniturePaymentPlanDelayMonths() {
+	public int getFurniturePaymentPlanDelayMonths() {
 		return furniturePaymentPlanDelayMonths;
 	}
 
-	public void setFurniturePaymentPlanDelayMonths(java.lang.Integer furniturePaymentPlanDelayMonths) {
+	public void setFurniturePaymentPlanDelayMonths(int furniturePaymentPlanDelayMonths) {
 		this.furniturePaymentPlanDelayMonths = furniturePaymentPlanDelayMonths;
 	}
 
-	public java.lang.Integer getDifferenceBetweenCurrentAcdAndAoptDateDays() {
+	public int getDifferenceBetweenCurrentAcdAndAoptDateDays() {
 		return differenceBetweenCurrentAcdAndAoptDateDays;
 	}
 
-	public void setDifferenceBetweenCurrentAcdAndAoptDateDays(java.lang.Integer differenceBetweenCurrentAcdAndAoptDateDays) {
+	public void setDifferenceBetweenCurrentAcdAndAoptDateDays(int differenceBetweenCurrentAcdAndAoptDateDays) {
 		this.differenceBetweenCurrentAcdAndAoptDateDays = differenceBetweenCurrentAcdAndAoptDateDays;
 	}
 
-	public java.lang.Double getTempOne() {
+	public double getTempOne() {
 		return tempOne;
 	}
 
-	public void setTempOne(java.lang.Double tempOne) {
+	public void setTempOne(double tempOne) {
 		this.tempOne = tempOne;
 	}
 
-	public java.lang.Double getTempTwo() {
+	public double getTempTwo() {
 		return tempTwo;
 	}
 
-	public void setTempTwo(java.lang.Double tempTwo) {
+	public void setTempTwo(double tempTwo) {
 		this.tempTwo = tempTwo;
 	}
 
-	public java.lang.Double getTempThree() {
+	public double getTempThree() {
 		return tempThree;
 	}
 
-	public void setTempThree(java.lang.Double tempThree) {
+	public void setTempThree(double tempThree) {
 		this.tempThree = tempThree;
 	}
 
-	public java.lang.Double getTempFour() {
+	public double getTempFour() {
 		return tempFour;
 	}
 
-	public void setTempFour(java.lang.Double tempFour) {
+	public void setTempFour(double tempFour) {
 		this.tempFour = tempFour;
 	}
 
-	public java.lang.String getPriorAopt() {
+	public boolean getPriorAopt() {
 		return priorAopt;
 	}
 
-	public void setPriorAopt(java.lang.String priorAopt) {
+	public void setPriorAopt(boolean priorAopt) {
 		this.priorAopt = priorAopt;
 	}
 
@@ -546,11 +545,11 @@ public class Aopt implements java.io.Serializable {
 		this.thirdApprovingAuthority = thirdApprovingAuthority;
 	}
 
-	public java.lang.Double getPaymentDpPercentage() {
+	public java.lang.String getPaymentDpPercentage() {
 		return paymentDpPercentage;
 	}
 
-	public void setPaymentDpPercentage(java.lang.Double paymentDpPercentage) {
+	public void setPaymentDpPercentage(java.lang.String paymentDpPercentage) {
 		this.paymentDpPercentage = paymentDpPercentage;
 	}
 
@@ -618,11 +617,11 @@ public class Aopt implements java.io.Serializable {
 		this.paymentGateOneDate = paymentGateOneDate;
 	}
 
-	public java.lang.Integer getPaymentGateOnePercentage() {
+	public java.lang.String getPaymentGateOnePercentage() {
 		return paymentGateOnePercentage;
 	}
 
-	public void setPaymentGateOnePercentage(java.lang.Integer paymentGateOnePercentage) {
+	public void setPaymentGateOnePercentage(java.lang.String paymentGateOnePercentage) {
 		this.paymentGateOnePercentage = paymentGateOnePercentage;
 	}
 
@@ -634,11 +633,11 @@ public class Aopt implements java.io.Serializable {
 		this.paymentGateTwoDate = paymentGateTwoDate;
 	}
 
-	public java.lang.Integer getPaymentGateTwoPercentage() {
+	public java.lang.String getPaymentGateTwoPercentage() {
 		return paymentGateTwoPercentage;
 	}
 
-	public void setPaymentGateTwoPercentage(java.lang.Integer paymentGateTwoPercentage) {
+	public void setPaymentGateTwoPercentage(java.lang.String paymentGateTwoPercentage) {
 		this.paymentGateTwoPercentage = paymentGateTwoPercentage;
 	}
 
@@ -650,11 +649,11 @@ public class Aopt implements java.io.Serializable {
 		this.paymentGateThreeDate = paymentGateThreeDate;
 	}
 
-	public java.lang.Integer getPaymentGateThreePercentage() {
+	public java.lang.String getPaymentGateThreePercentage() {
 		return paymentGateThreePercentage;
 	}
 
-	public void setPaymentGateThreePercentage(java.lang.Integer paymentGateThreePercentage) {
+	public void setPaymentGateThreePercentage(java.lang.String paymentGateThreePercentage) {
 		this.paymentGateThreePercentage = paymentGateThreePercentage;
 	}
 
@@ -666,19 +665,19 @@ public class Aopt implements java.io.Serializable {
 		this.paymentGateFourDate = paymentGateFourDate;
 	}
 
-	public java.lang.Integer getPaymentGateFourPercentage() {
+	public java.lang.String getPaymentGateFourPercentage() {
 		return paymentGateFourPercentage;
 	}
 
-	public void setPaymentGateFourPercentage(java.lang.Integer paymentGateFourPercentage) {
+	public void setPaymentGateFourPercentage(java.lang.String paymentGateFourPercentage) {
 		this.paymentGateFourPercentage = paymentGateFourPercentage;
 	}
 
-	public java.lang.Integer getPaymentGateCompletionPercentage() {
+	public java.lang.String getPaymentGateCompletionPercentage() {
 		return paymentGateCompletionPercentage;
 	}
 
-	public void setPaymentGateCompletionPercentage(java.lang.Integer paymentGateCompletionPercentage) {
+	public void setPaymentGateCompletionPercentage(java.lang.String paymentGateCompletionPercentage) {
 		this.paymentGateCompletionPercentage = paymentGateCompletionPercentage;
 	}
 
@@ -690,11 +689,11 @@ public class Aopt implements java.io.Serializable {
 		this.paymentGateFiveDate = paymentGateFiveDate;
 	}
 
-	public java.lang.Integer getPaymentGateFivePercentage() {
+	public java.lang.String getPaymentGateFivePercentage() {
 		return paymentGateFivePercentage;
 	}
 
-	public void setPaymentGateFivePercentage(java.lang.Integer paymentGateFivePercentage) {
+	public void setPaymentGateFivePercentage(java.lang.String paymentGateFivePercentage) {
 		this.paymentGateFivePercentage = paymentGateFivePercentage;
 	}
 
@@ -706,11 +705,11 @@ public class Aopt implements java.io.Serializable {
 		this.paymentGateSixDate = paymentGateSixDate;
 	}
 
-	public java.lang.Integer getPaymentGateSixPercentage() {
+	public java.lang.String getPaymentGateSixPercentage() {
 		return paymentGateSixPercentage;
 	}
 
-	public void setPaymentGateSixPercentage(java.lang.Integer paymentGateSixPercentage) {
+	public void setPaymentGateSixPercentage(java.lang.String paymentGateSixPercentage) {
 		this.paymentGateSixPercentage = paymentGateSixPercentage;
 	}
 
@@ -722,40 +721,39 @@ public class Aopt implements java.io.Serializable {
 		this.paymentGateSevenDate = paymentGateSevenDate;
 	}
 
-	public java.lang.Integer getPaymentGateSevenPercentage() {
+	public java.lang.String getPaymentGateSevenPercentage() {
 		return paymentGateSevenPercentage;
 	}
 
-	public void setPaymentGateSevenPercentage(java.lang.Integer paymentGateSevenPercentage) {
+	public void setPaymentGateSevenPercentage(java.lang.String paymentGateSevenPercentage) {
 		this.paymentGateSevenPercentage = paymentGateSevenPercentage;
 	}
 
 	public Aopt(java.lang.String description, java.util.Date ruleValidityStartDate, java.util.Date ruleValidityEndDate, java.lang.String subProcessName,
-			java.lang.String projectCity, java.lang.String unitType, java.lang.String permittedUse, java.lang.Boolean eho, java.lang.Boolean dispute, java.lang.Boolean enforcement,
-			java.lang.Boolean litigation, java.lang.String project, java.lang.String buildingCode, java.lang.String bedroomType, java.lang.Boolean ho,
-			java.lang.String applicableNationality, java.lang.Boolean bulk, java.lang.String originalPaymentPlanType, java.lang.String proposedPaymentPlanType,
-			java.lang.Boolean paymentsEquallyDistributed, java.lang.Boolean paymentPlanExtendedBeyondAcd, java.lang.String tempFive, java.lang.String tempSix,
-			java.lang.Boolean defaultVal, java.lang.String previousWaivers, java.lang.Integer currentConstructionStatusCompletePercentage,
-			java.lang.Integer currentReraConstructionStatusCompletePercentage, java.lang.Integer delayExpectedFromOriginalAcdDays,
-			java.lang.Integer portfolioValue, java.lang.Integer areaVariationPercentage, java.lang.Integer otherRecharges, java.lang.Integer percOverdue,
-			java.lang.Integer numberOfTimesCustomerHasDefaultedOnInstallments,
-			java.lang.Integer percPdcCoverageOrPertPaymentPaidWhicheverIsHigher, java.lang.Integer differencePaymentAndReraPercentage,
-			java.lang.Integer completionInstallmentPrecProposedPlan,
-			java.lang.Integer diffCurAcdAndLastNonCompletionInstallmentInProposedPlan,
-			java.lang.Integer diffCurAcdAndLastPaymentMilestoneInProposedPlan, java.lang.Integer maximumMovementInAnInstallmentDays,
-			java.lang.Integer numberOfInstallmentsMoved, java.lang.Integer furniturePaymentPlanDelayMonths,
-			java.lang.Integer differenceBetweenCurrentAcdAndAoptDateDays, java.lang.Double tempOne, java.lang.Double tempTwo, java.lang.Double tempThree,
-			java.lang.Double tempFour, java.lang.String priorAopt, java.lang.String allowed, java.lang.String message, java.lang.String firstRecommendingAuthority,
+			java.lang.String projectCity, java.lang.String unitType, java.lang.String permittedUse, boolean eho, boolean dispute, boolean enforcement,
+			boolean litigation, java.lang.String project, java.lang.String buildingCode, java.lang.String bedroomType, boolean ho,
+			java.lang.String applicableNationality, boolean bulk, java.lang.String originalPaymentPlanType, java.lang.String proposedPaymentPlanType,
+			boolean paymentsEquallyDistributed, boolean paymentPlanExtendedBeyondAcd, java.lang.String tempFive, java.lang.String tempSix,
+			boolean defaultVal, java.lang.String previousWaivers, int currentConstructionStatusCompletePercentage,
+			int currentReraConstructionStatusCompletePercentage, int delayExpectedFromOriginalAcdDays,
+			int portfolioValue, int areaVariationPercentage, int otherRecharges, int percOverdue,
+			int numberOfTimesCustomerHasDefaultedOnInstallments, int percPdcCoverageOrPertPaymentPaidWhicheverIsHigher,
+			int differencePaymentAndReraPercentage, int completionInstallmentPrecProposedPlan,
+			int diffCurAcdAndLastNonCompletionInstallmentInProposedPlan,
+			int diffCurAcdAndLastPaymentMilestoneInProposedPlan, int maximumMovementInAnInstallmentDays,
+			int numberOfInstallmentsMoved, int furniturePaymentPlanDelayMonths,
+			int differenceBetweenCurrentAcdAndAoptDateDays, double tempOne, double tempTwo, double tempThree,
+			double tempFour, boolean priorAopt, java.lang.String allowed, java.lang.String message, java.lang.String firstRecommendingAuthority,
 			java.lang.String secondRecommendingAuthority, java.lang.String thirdRecommendingAuthority, java.lang.String fourthRecommendingAuthority,
 			java.lang.String firstApprovingAuthority, java.lang.String secondApprovingAuthority, java.lang.String thirdApprovingAuthority,
-			java.lang.Double paymentDpPercentage, java.lang.String paymentGateOne, java.lang.String paymentGateTwo, java.lang.String paymentGateThree,
+			java.lang.String paymentDpPercentage, java.lang.String paymentGateOne, java.lang.String paymentGateTwo, java.lang.String paymentGateThree,
 			java.lang.String paymentGateFour, java.lang.String paymentGateFive, java.lang.String paymentGateSix, java.lang.String paymentGateSeven,
-			java.lang.String paymentGateOneDate, java.lang.Integer paymentGateOnePercentage, java.lang.String paymentGateTwoDate,
-			java.lang.Integer paymentGateTwoPercentage, java.lang.String paymentGateThreeDate, java.lang.Integer paymentGateThreePercentage,
-			java.lang.String paymentGateFourDate, java.lang.Integer paymentGateFourPercentage, java.lang.Integer paymentGateCompletionPercentage,
-			java.lang.String paymentGateFiveDate, java.lang.Integer paymentGateFivePercentage, java.lang.String paymentGateSixDate,
-			java.lang.Integer paymentGateSixPercentage, java.lang.String paymentGateSevenDate, java.lang.Integer paymentGateSevenPercentage) {
-		
+			java.lang.String paymentGateOneDate, java.lang.String paymentGateOnePercentage, java.lang.String paymentGateTwoDate,
+			java.lang.String paymentGateTwoPercentage, java.lang.String paymentGateThreeDate, java.lang.String paymentGateThreePercentage,
+			java.lang.String paymentGateFourDate, java.lang.String paymentGateFourPercentage, java.lang.String paymentGateCompletionPercentage,
+			java.lang.String paymentGateFiveDate, java.lang.String paymentGateFivePercentage, java.lang.String paymentGateSixDate,
+			java.lang.String paymentGateSixPercentage, java.lang.String paymentGateSevenDate, java.lang.String paymentGateSevenPercentage) {
+		super();
 		this.description = description;
 		this.ruleValidityStartDate = ruleValidityStartDate;
 		this.ruleValidityEndDate = ruleValidityEndDate;

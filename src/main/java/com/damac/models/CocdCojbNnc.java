@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 
+
 public class CocdCojbNnc implements java.io.Serializable {
 	static final long serialVersionUID = 1L;
 	
@@ -19,23 +20,23 @@ public class CocdCojbNnc implements java.io.Serializable {
 	private java.lang.String permittedUse;
 	private java.lang.String bedroomType;
 	private java.lang.String readyOffPlan;
-	private java.lang.Boolean eho;
-	private java.lang.Boolean ho;
-	private java.lang.Boolean rentalPool;
+	private boolean eho;
+	private boolean ho;
+	private boolean rentalPool;
 	private java.lang.String customerType;
-	private java.lang.Boolean registeredWithOqood;
+	private boolean registeredWithOqood;
 	private java.lang.String applicableNationality;
-	private java.lang.Boolean bulk;
-	private java.lang.Boolean defaultVal;
+	private boolean bulk;
+	private boolean defaultVal;
 	private java.lang.String agreementStatus;
-	private java.lang.Boolean overdue;
-	private java.lang.Boolean ftlSent;
-	private java.lang.Boolean dispute;
-	private java.lang.Boolean enforcement;
-	private java.lang.Boolean litigation;
-	private java.lang.Boolean mortgage;
-	private java.lang.Boolean underAssignment;
-	private java.lang.Boolean poa;
+	private boolean overdue;
+	private boolean ftlSent;
+	private boolean dispute;
+	private boolean enforcement;
+	private boolean litigation;
+	private boolean mortgage;
+	private boolean underAssignment;
+	private boolean poa;
 	private java.lang.String tempA;
 	private java.lang.String tempB;
 	private java.lang.String tempC;
@@ -192,32 +193,32 @@ public class CocdCojbNnc implements java.io.Serializable {
 	}
 
 
-	public java.lang.Boolean getEho() {
+	public boolean isEho() {
 		return eho;
 	}
 
 
-	public void setEho(java.lang.Boolean eho) {
+	public void setEho(boolean eho) {
 		this.eho = eho;
 	}
 
 
-	public java.lang.Boolean getHo() {
+	public boolean isHo() {
 		return ho;
 	}
 
 
-	public void setHo(java.lang.Boolean ho) {
+	public void setHo(boolean ho) {
 		this.ho = ho;
 	}
 
 
-	public java.lang.Boolean getRentalPool() {
+	public boolean isRentalPool() {
 		return rentalPool;
 	}
 
 
-	public void setRentalPool(java.lang.Boolean rentalPool) {
+	public void setRentalPool(boolean rentalPool) {
 		this.rentalPool = rentalPool;
 	}
 
@@ -232,12 +233,12 @@ public class CocdCojbNnc implements java.io.Serializable {
 	}
 
 
-	public java.lang.Boolean getRegisteredWithOqood() {
+	public boolean isRegisteredWithOqood() {
 		return registeredWithOqood;
 	}
 
 
-	public void setRegisteredWithOqood(java.lang.Boolean registeredWithOqood) {
+	public void setRegisteredWithOqood(boolean registeredWithOqood) {
 		this.registeredWithOqood = registeredWithOqood;
 	}
 
@@ -252,22 +253,22 @@ public class CocdCojbNnc implements java.io.Serializable {
 	}
 
 
-	public java.lang.Boolean getBulk() {
+	public boolean isBulk() {
 		return bulk;
 	}
 
 
-	public void setBulk(java.lang.Boolean bulk) {
+	public void setBulk(boolean bulk) {
 		this.bulk = bulk;
 	}
 
 
-	public java.lang.Boolean getDefaultVal() {
+	public boolean isDefaultVal() {
 		return defaultVal;
 	}
 
 
-	public void setDefaultVal(java.lang.Boolean defaultVal) {
+	public void setDefaultVal(boolean defaultVal) {
 		this.defaultVal = defaultVal;
 	}
 
@@ -282,82 +283,82 @@ public class CocdCojbNnc implements java.io.Serializable {
 	}
 
 
-	public java.lang.Boolean getOverdue() {
+	public boolean isOverdue() {
 		return overdue;
 	}
 
 
-	public void setOverdue(java.lang.Boolean overdue) {
+	public void setOverdue(boolean overdue) {
 		this.overdue = overdue;
 	}
 
 
-	public java.lang.Boolean getFtlSent() {
+	public boolean isFtlSent() {
 		return ftlSent;
 	}
 
 
-	public void setFtlSent(java.lang.Boolean ftlSent) {
+	public void setFtlSent(boolean ftlSent) {
 		this.ftlSent = ftlSent;
 	}
 
 
-	public java.lang.Boolean getDispute() {
+	public boolean isDispute() {
 		return dispute;
 	}
 
 
-	public void setDispute(java.lang.Boolean dispute) {
+	public void setDispute(boolean dispute) {
 		this.dispute = dispute;
 	}
 
 
-	public java.lang.Boolean getEnforcement() {
+	public boolean isEnforcement() {
 		return enforcement;
 	}
 
 
-	public void setEnforcement(java.lang.Boolean enforcement) {
+	public void setEnforcement(boolean enforcement) {
 		this.enforcement = enforcement;
 	}
 
 
-	public java.lang.Boolean getLitigation() {
+	public boolean isLitigation() {
 		return litigation;
 	}
 
 
-	public void setLitigation(java.lang.Boolean litigation) {
+	public void setLitigation(boolean litigation) {
 		this.litigation = litigation;
 	}
 
 
-	public java.lang.Boolean getMortgage() {
+	public boolean isMortgage() {
 		return mortgage;
 	}
 
 
-	public void setMortgage(java.lang.Boolean mortgage) {
+	public void setMortgage(boolean mortgage) {
 		this.mortgage = mortgage;
 	}
 
 
-	public java.lang.Boolean getUnderAssignment() {
+	public boolean isUnderAssignment() {
 		return underAssignment;
 	}
 
 
-	public void setUnderAssignment(java.lang.Boolean underAssignment) {
+	public void setUnderAssignment(boolean underAssignment) {
 		this.underAssignment = underAssignment;
 	}
 
 
-	public java.lang.Boolean getPoa() {
+	public boolean isPoa() {
 		return poa;
 	}
 
 
-	public void setPoa(java.lang.Boolean poa) {
+	public void setPoa(boolean poa) {
 		this.poa = poa;
 	}
 
@@ -391,7 +392,7 @@ public class CocdCojbNnc implements java.io.Serializable {
 		this.tempC = tempC;
 	}
 
-	
+
 	public java.lang.String getAdminFee() {
 		return adminFee;
 	}
@@ -614,18 +615,18 @@ public class CocdCojbNnc implements java.io.Serializable {
 
 	public CocdCojbNnc(java.lang.String description, java.util.Date ruleValidityStart, java.util.Date ruleValidityEnd, java.lang.String sourceofRequest,
 			java.lang.String processName, java.lang.String subProcessName, java.lang.String projectCity, java.lang.String project, java.lang.String buildingCode,
-			java.lang.String permittedUse, java.lang.String bedroomType, java.lang.String readyOffPlan, java.lang.Boolean eho, java.lang.Boolean ho, java.lang.Boolean rentalPool,
-			java.lang.String customerType, java.lang.Boolean registeredWithOqood, java.lang.String applicableNationality, java.lang.Boolean bulk,
-			java.lang.Boolean defaultVal, java.lang.String agreementStatus, java.lang.Boolean overdue, java.lang.Boolean ftlSent, java.lang.Boolean dispute,
-			java.lang.Boolean enforcement, java.lang.Boolean litigation, java.lang.Boolean mortgage, java.lang.Boolean underAssignment, java.lang.Boolean poa,
-			java.lang.String tempA, java.lang.String tempB, java.lang.String tempC,java.lang.String adminFee, java.lang.String allowed, java.lang.String message, java.lang.String signedRequestForm,
-			java.lang.String cocdForm, java.lang.String selfAttestedPassportCopy, java.lang.String selfattestedPPCopy, java.lang.String selfAttestedEmiratesID,
-			java.lang.String selfAttestedGccID, java.lang.String letterOfDecleration, java.lang.String courtOrder,
+			java.lang.String permittedUse, java.lang.String bedroomType, java.lang.String readyOffPlan, boolean eho, boolean ho, boolean rentalPool,
+			java.lang.String customerType, boolean registeredWithOqood, java.lang.String applicableNationality, boolean bulk,
+			boolean defaultVal, java.lang.String agreementStatus, boolean overdue, boolean ftlSent, boolean dispute,
+			boolean enforcement, boolean litigation, boolean mortgage, boolean underAssignment, boolean poa,
+			java.lang.String tempA, java.lang.String tempB, java.lang.String tempC, java.lang.String adminFee, java.lang.String allowed, java.lang.String message,
+			java.lang.String signedRequestForm, java.lang.String cocdForm, java.lang.String selfAttestedPassportCopy, java.lang.String selfattestedPPCopy,
+			java.lang.String selfAttestedEmiratesID, java.lang.String selfAttestedGccID, java.lang.String letterOfDecleration, java.lang.String courtOrder,
 			java.lang.String companyAuthorisedSignatorySupportingDocuments, java.lang.String tempOne, java.lang.String tempTwo, java.lang.String tempThree,
 			java.lang.String firstRecommendingAuthority, java.lang.String secondRecommendingAuthority, java.lang.String thirdRecommendingAuthority,
 			java.lang.String fourthRecommendingAuthority, java.lang.String firstApprovingAuthority, java.lang.String secondApprovingAuthority,
 			java.lang.String thirdApprovingAuthority) {
-		
+		super();
 		this.description = description;
 		this.ruleValidityStart = ruleValidityStart;
 		this.ruleValidityEnd = ruleValidityEnd;
@@ -682,6 +683,7 @@ public class CocdCojbNnc implements java.io.Serializable {
 		this.thirdApprovingAuthority = thirdApprovingAuthority;
 	}
 
-    
+
+	
     
 }

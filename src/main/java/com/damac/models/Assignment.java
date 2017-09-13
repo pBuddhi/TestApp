@@ -3,6 +3,9 @@ package com.damac.models;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
+
+
+
 public class Assignment implements java.io.Serializable{
 	static final long serialVersionUID = 1L;
 	
@@ -20,34 +23,35 @@ public class Assignment implements java.io.Serializable{
 	private java.lang.String bedroomType;
 	private java.lang.String applicableUnits;
 	private java.lang.String unitType;
-	private java.lang.Double areaVariationPercentage;
-	private java.lang.Double typeVariation;
-	private java.lang.Boolean recovery;
-	private java.lang.Double paidPercentage;
-	private java.lang.Double defaultPercentage;
+	private double areaVariationPercentage;
+	private double typeVariation;
+	private boolean recovery;
+	private double paidPercentage;
+	private double defaultPercentage;
 	private java.lang.String customerType;
 	private java.lang.String agreementStatus;
-	private java.lang.Boolean defaultVal;
-	private java.lang.Boolean underTermination;
-	private java.lang.Boolean bulk;
-	private java.lang.Boolean dispute;
-	private java.lang.Boolean enforcement;
-	private java.lang.Boolean litigation;
-	private java.lang.Boolean mortgage;
-	private java.lang.Boolean underAssignment;
+	private boolean defaultVal;
+	private boolean underTermination;
+	private boolean bulk;
+	private boolean dispute;
+	private boolean enforcement;
+	private boolean litigation;
+	private boolean mortgage;
+	private boolean underAssignment;
 	private java.lang.String readyOffPlan;
-	private java.lang.Boolean eho;
-	private java.lang.Boolean rentalPool;
-	private java.lang.Boolean ho;
+	private boolean eho;
+	private boolean rentalPool;
+	private boolean ho;
 	private java.lang.String applicableNationality;
-	private java.lang.Boolean poa;
-	private java.lang.Boolean poaAssigner;
-	private java.lang.Boolean poaAssignor;
-	private java.lang.Boolean courtOrderForDeceasedCase;
-	private java.lang.Boolean deceasedCase;
-	private java.lang.Boolean nocIssuanceInLastFifteenDays;
-	private java.lang.Boolean pcc;
-	private java.lang.Integer purchaserAgeYears;
+	private boolean poa;
+	private boolean poaAssigner;
+	private boolean poaAssignor;
+	private boolean courtOrderForDeceasedCase;
+	private boolean deceasedCase;
+	private boolean nocIssuanceInLastFifteenDays;
+	private boolean pcc;
+	private int purchaserAgeYears;
+	private java.lang.String waiverPercentage;
 	private java.lang.String tempA;
 	private java.lang.String tempB;
 	private java.lang.String tempC;
@@ -67,9 +71,9 @@ public class Assignment implements java.io.Serializable{
 	private java.lang.String tempTwo;
 	private java.lang.String tempThree;
 	
-	private java.lang.Double adminFeePsf;
-	private java.lang.Double adminFeeFlat;
-	private java.lang.Double adminFeePercentage;
+	private java.lang.String adminFeePsf;
+	private java.lang.String adminFeeFlat;
+	private java.lang.String adminFeePercentage;
 	
 	private java.lang.String originalSaleAgreementOriginalTitleDeed;
 	private java.lang.String nocRequestLetterOfAssignment;
@@ -244,52 +248,52 @@ public class Assignment implements java.io.Serializable{
 	}
 
 
-	public java.lang.Double getAreaVariationPercentage() {
+	public double getAreaVariationPercentage() {
 		return areaVariationPercentage;
 	}
 
 
-	public void setAreaVariationPercentage(java.lang.Double areaVariationPercentage) {
+	public void setAreaVariationPercentage(double areaVariationPercentage) {
 		this.areaVariationPercentage = areaVariationPercentage;
 	}
 
 
-	public java.lang.Double getTypeVariation() {
+	public double getTypeVariation() {
 		return typeVariation;
 	}
 
 
-	public void setTypeVariation(java.lang.Double typeVariation) {
+	public void setTypeVariation(double typeVariation) {
 		this.typeVariation = typeVariation;
 	}
 
 
-	public java.lang.Boolean getRecovery() {
+	public boolean isRecovery() {
 		return recovery;
 	}
 
 
-	public void setRecovery(java.lang.Boolean recovery) {
+	public void setRecovery(boolean recovery) {
 		this.recovery = recovery;
 	}
 
 
-	public java.lang.Double getPaidPercentage() {
+	public double getPaidPercentage() {
 		return paidPercentage;
 	}
 
 
-	public void setPaidPercentage(java.lang.Double paidPercentage) {
+	public void setPaidPercentage(double paidPercentage) {
 		this.paidPercentage = paidPercentage;
 	}
 
 
-	public java.lang.Double getDefaultPercentage() {
+	public double getDefaultPercentage() {
 		return defaultPercentage;
 	}
 
 
-	public void setDefaultPercentage(java.lang.Double defaultPercentage) {
+	public void setDefaultPercentage(double defaultPercentage) {
 		this.defaultPercentage = defaultPercentage;
 	}
 
@@ -314,82 +318,82 @@ public class Assignment implements java.io.Serializable{
 	}
 
 
-	public java.lang.Boolean getDefaultVal() {
+	public boolean isDefaultVal() {
 		return defaultVal;
 	}
 
 
-	public void setDefaultVal(java.lang.Boolean defaultVal) {
+	public void setDefaultVal(boolean defaultVal) {
 		this.defaultVal = defaultVal;
 	}
 
 
-	public java.lang.Boolean getUnderTermination() {
+	public boolean isUnderTermination() {
 		return underTermination;
 	}
 
 
-	public void setUnderTermination(java.lang.Boolean underTermination) {
+	public void setUnderTermination(boolean underTermination) {
 		this.underTermination = underTermination;
 	}
 
 
-	public java.lang.Boolean getBulk() {
+	public boolean isBulk() {
 		return bulk;
 	}
 
 
-	public void setBulk(java.lang.Boolean bulk) {
+	public void setBulk(boolean bulk) {
 		this.bulk = bulk;
 	}
 
 
-	public java.lang.Boolean getDispute() {
+	public boolean isDispute() {
 		return dispute;
 	}
 
 
-	public void setDispute(java.lang.Boolean dispute) {
+	public void setDispute(boolean dispute) {
 		this.dispute = dispute;
 	}
 
 
-	public java.lang.Boolean getEnforcement() {
+	public boolean isEnforcement() {
 		return enforcement;
 	}
 
 
-	public void setEnforcement(java.lang.Boolean enforcement) {
+	public void setEnforcement(boolean enforcement) {
 		this.enforcement = enforcement;
 	}
 
 
-	public java.lang.Boolean getLitigation() {
+	public boolean isLitigation() {
 		return litigation;
 	}
 
 
-	public void setLitigation(java.lang.Boolean litigation) {
+	public void setLitigation(boolean litigation) {
 		this.litigation = litigation;
 	}
 
 
-	public java.lang.Boolean getMortgage() {
+	public boolean isMortgage() {
 		return mortgage;
 	}
 
 
-	public void setMortgage(java.lang.Boolean mortgage) {
+	public void setMortgage(boolean mortgage) {
 		this.mortgage = mortgage;
 	}
 
 
-	public java.lang.Boolean getUnderAssignment() {
+	public boolean isUnderAssignment() {
 		return underAssignment;
 	}
 
 
-	public void setUnderAssignment(java.lang.Boolean underAssignment) {
+	public void setUnderAssignment(boolean underAssignment) {
 		this.underAssignment = underAssignment;
 	}
 
@@ -404,32 +408,32 @@ public class Assignment implements java.io.Serializable{
 	}
 
 
-	public java.lang.Boolean getEho() {
+	public boolean isEho() {
 		return eho;
 	}
 
 
-	public void setEho(java.lang.Boolean eho) {
+	public void setEho(boolean eho) {
 		this.eho = eho;
 	}
 
 
-	public java.lang.Boolean getRentalPool() {
+	public boolean isRentalPool() {
 		return rentalPool;
 	}
 
 
-	public void setRentalPool(java.lang.Boolean rentalPool) {
+	public void setRentalPool(boolean rentalPool) {
 		this.rentalPool = rentalPool;
 	}
 
 
-	public java.lang.Boolean getHo() {
+	public boolean isHo() {
 		return ho;
 	}
 
 
-	public void setHo(java.lang.Boolean ho) {
+	public void setHo(boolean ho) {
 		this.ho = ho;
 	}
 
@@ -444,83 +448,93 @@ public class Assignment implements java.io.Serializable{
 	}
 
 
-	public java.lang.Boolean getPoa() {
+	public boolean isPoa() {
 		return poa;
 	}
 
 
-	public void setPoa(java.lang.Boolean poa) {
+	public void setPoa(boolean poa) {
 		this.poa = poa;
 	}
 
 
-	public java.lang.Boolean getPoaAssigner() {
+	public boolean isPoaAssigner() {
 		return poaAssigner;
 	}
 
 
-	public void setPoaAssigner(java.lang.Boolean poaAssigner) {
+	public void setPoaAssigner(boolean poaAssigner) {
 		this.poaAssigner = poaAssigner;
 	}
 
 
-	public java.lang.Boolean getPoaAssignor() {
+	public boolean isPoaAssignor() {
 		return poaAssignor;
 	}
 
 
-	public void setPoaAssignor(java.lang.Boolean poaAssignor) {
+	public void setPoaAssignor(boolean poaAssignor) {
 		this.poaAssignor = poaAssignor;
 	}
 
 
-	public java.lang.Boolean getCourtOrderForDeceasedCase() {
+	public boolean isCourtOrderForDeceasedCase() {
 		return courtOrderForDeceasedCase;
 	}
 
 
-	public void setCourtOrderForDeceasedCase(java.lang.Boolean courtOrderForDeceasedCase) {
+	public void setCourtOrderForDeceasedCase(boolean courtOrderForDeceasedCase) {
 		this.courtOrderForDeceasedCase = courtOrderForDeceasedCase;
 	}
 
 
-	public java.lang.Boolean getDeceasedCase() {
+	public boolean isDeceasedCase() {
 		return deceasedCase;
 	}
 
 
-	public void setDeceasedCase(java.lang.Boolean deceasedCase) {
+	public void setDeceasedCase(boolean deceasedCase) {
 		this.deceasedCase = deceasedCase;
 	}
 
 
-	public java.lang.Boolean getNocIssuanceInLastFifteenDays() {
+	public boolean isNocIssuanceInLastFifteenDays() {
 		return nocIssuanceInLastFifteenDays;
 	}
 
 
-	public void setNocIssuanceInLastFifteenDays(java.lang.Boolean nocIssuanceInLastFifteenDays) {
+	public void setNocIssuanceInLastFifteenDays(boolean nocIssuanceInLastFifteenDays) {
 		this.nocIssuanceInLastFifteenDays = nocIssuanceInLastFifteenDays;
 	}
 
 
-	public java.lang.Boolean getPcc() {
+	public boolean isPcc() {
 		return pcc;
 	}
 
 
-	public void setPcc(java.lang.Boolean pcc) {
+	public void setPcc(boolean pcc) {
 		this.pcc = pcc;
 	}
 
 
-	public java.lang.Integer getPurchaserAgeYears() {
+	public int getPurchaserAgeYears() {
 		return purchaserAgeYears;
 	}
 
 
-	public void setPurchaserAgeYears(java.lang.Integer purchaserAgeYears) {
+	public void setPurchaserAgeYears(int purchaserAgeYears) {
 		this.purchaserAgeYears = purchaserAgeYears;
+	}
+
+    	
+	public java.lang.String getWaiverPercentage() {
+		return waiverPercentage;
+	}
+
+
+	public void setWaiverPercentage(java.lang.String waiverPercentage) {
+		this.waiverPercentage = waiverPercentage;
 	}
 
 
@@ -643,7 +657,7 @@ public class Assignment implements java.io.Serializable{
 		this.approvingAuthorityThree = approvingAuthorityThree;
 	}
 
-
+    
 	public java.lang.String getTempOne() {
 		return tempOne;
 	}
@@ -674,32 +688,32 @@ public class Assignment implements java.io.Serializable{
 	}
 
 
-	public java.lang.Double getAdminFeePsf() {
+	public java.lang.String getAdminFeePsf() {
 		return adminFeePsf;
 	}
 
 
-	public void setAdminFeePsf(java.lang.Double adminFeePsf) {
+	public void setAdminFeePsf(java.lang.String adminFeePsf) {
 		this.adminFeePsf = adminFeePsf;
 	}
 
 
-	public java.lang.Double getAdminFeeFlat() {
+	public java.lang.String getAdminFeeFlat() {
 		return adminFeeFlat;
 	}
 
 
-	public void setAdminFeeFlat(java.lang.Double adminFeeFlat) {
+	public void setAdminFeeFlat(java.lang.String adminFeeFlat) {
 		this.adminFeeFlat = adminFeeFlat;
 	}
 
 
-	public java.lang.Double getAdminFeePercentage() {
+	public java.lang.String getAdminFeePercentage() {
 		return adminFeePercentage;
 	}
 
 
-	public void setAdminFeePercentage(java.lang.Double adminFeePercentage) {
+	public void setAdminFeePercentage(java.lang.String adminFeePercentage) {
 		this.adminFeePercentage = adminFeePercentage;
 	}
 
@@ -1078,17 +1092,17 @@ public class Assignment implements java.io.Serializable{
 	public Assignment(java.lang.String description, java.util.Date ruleValidityStart, java.util.Date ruleValidityEnd, java.lang.String sourceOfRequest,
 			java.lang.String processName, java.lang.String subProcessName, java.lang.String projectCity, java.lang.String project, java.lang.String buildingCode,
 			java.lang.String permittedUse, java.lang.String bedroomType, java.lang.String applicableUnits, java.lang.String unitType,
-			java.lang.Double areaVariationPercentage, java.lang.Double typeVariation, java.lang.Boolean recovery, java.lang.Double paidPercentage,
-			java.lang.Double defaultPercentage, java.lang.String customerType, java.lang.String agreementStatus, java.lang.Boolean defaultVal,
-			java.lang.Boolean underTermination, java.lang.Boolean bulk, java.lang.Boolean dispute, java.lang.Boolean enforcement, java.lang.Boolean litigation,
-			java.lang.Boolean mortgage, java.lang.Boolean underAssignment, java.lang.String readyOffPlan, java.lang.Boolean eho, java.lang.Boolean rentalPool, java.lang.Boolean ho,
-			java.lang.String applicableNationality, java.lang.Boolean poa, java.lang.Boolean poaAssigner, java.lang.Boolean poaAssignor,
-			java.lang.Boolean courtOrderForDeceasedCase, java.lang.Boolean deceasedCase, java.lang.Boolean nocIssuanceInLastFifteenDays, java.lang.Boolean pcc,
-			java.lang.Integer purchaserAgeYears, java.lang.String tempA, java.lang.String tempB, java.lang.String tempC, java.lang.String allowed, java.lang.String message,
+			double areaVariationPercentage, double typeVariation, boolean recovery, double paidPercentage,
+			double defaultPercentage, java.lang.String customerType, java.lang.String agreementStatus, boolean defaultVal,
+			boolean underTermination, boolean bulk, boolean dispute, boolean enforcement, boolean litigation,
+			boolean mortgage, boolean underAssignment, java.lang.String readyOffPlan, boolean eho, boolean rentalPool, boolean ho,
+			java.lang.String applicableNationality, boolean poa, boolean poaAssigner, boolean poaAssignor,
+			boolean courtOrderForDeceasedCase, boolean deceasedCase, boolean nocIssuanceInLastFifteenDays, boolean pcc,
+			int purchaserAgeYears, java.lang.String waiverPercentage, java.lang.String tempA, java.lang.String tempB, java.lang.String tempC, java.lang.String allowed, java.lang.String message,
 			java.lang.String recommendingAuthorityOne, java.lang.String recommendingAuthorityTwo, java.lang.String recommendingAuthorityThree,
 			java.lang.String recommendingAuthorityFour, java.lang.String approvingAuthorityOne, java.lang.String approvingAuthorityTwo,
-			java.lang.String approvingAuthorityThree, java.lang.String tempOne, java.lang.String tempTwo, java.lang.String tempThree, java.lang.Double adminFeePsf,
-			java.lang.Double adminFeeFlat, java.lang.Double adminFeePercentage, java.lang.String originalSaleAgreementOriginalTitleDeed,
+			java.lang.String approvingAuthorityThree, java.lang.String tempOne, java.lang.String tempTwo, java.lang.String tempThree, java.lang.String adminFeePsf,
+			java.lang.String adminFeeFlat, java.lang.String adminFeePercentage, java.lang.String originalSaleAgreementOriginalTitleDeed,
 			java.lang.String nocRequestLetterOfAssignment, java.lang.String passportOfAssigneeJointAssignee,
 			java.lang.String passportOfAssignorJointAssignor, java.lang.String passportCopyOftheWitness,
 			java.lang.String courtOrderAndSuccessionCertificateListingAllHeirs,
@@ -1110,7 +1124,7 @@ public class Assignment implements java.io.Serializable{
 			java.lang.String passportCopyofLawFirmRepresentative, java.lang.String selfAttestedIdOfAssignor,
 			java.lang.String selfAttestedIdOfAssignee, java.lang.String originalBankNocLoanSettlementConfirmationAddressedToSellerCompany,
 			java.lang.String originalDeathCertificate, java.lang.String financialInstitutionConsentletterIfPropertyIsMortgaged) {
-		
+		super();
 		this.description = description;
 		this.ruleValidityStart = ruleValidityStart;
 		this.ruleValidityEnd = ruleValidityEnd;
@@ -1152,6 +1166,7 @@ public class Assignment implements java.io.Serializable{
 		this.nocIssuanceInLastFifteenDays = nocIssuanceInLastFifteenDays;
 		this.pcc = pcc;
 		this.purchaserAgeYears = purchaserAgeYears;
+		this.waiverPercentage = waiverPercentage;
 		this.tempA = tempA;
 		this.tempB = tempB;
 		this.tempC = tempC;
@@ -1207,7 +1222,6 @@ public class Assignment implements java.io.Serializable{
 		this.originalDeathCertificate = originalDeathCertificate;
 		this.financialInstitutionConsentletterIfPropertyIsMortgaged = financialInstitutionConsentletterIfPropertyIsMortgaged;
 	}
-
 
 	
     
