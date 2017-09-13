@@ -1,7 +1,9 @@
 package com.damac.models;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
+
 public class AssignmentApproval {
 	//ACTION variables
 	private java.lang.String allowed;
@@ -17,9 +19,9 @@ public class AssignmentApproval {
 	private java.lang.String tempTwo;
 	private java.lang.String tempThree;
 	
-	private java.lang.Double adminFeePsf;
-	private java.lang.Double adminFeeFlat;
-	private java.lang.Double adminFeePercentage;
+	private java.lang.String adminFeePsf;
+	private java.lang.String adminFeeFlat;
+	private java.lang.String adminFeePercentage;
 	
 	private java.lang.String originalSaleAgreementOriginalTitleDeed;
 	private java.lang.String nocRequestLetterOfAssignment;
@@ -158,27 +160,27 @@ public class AssignmentApproval {
 		this.tempThree = tempThree;
 	}
 
-	public java.lang.Double getAdminFeePsf() {
+	public java.lang.String getAdminFeePsf() {
 		return adminFeePsf;
 	}
 
-	public void setAdminFeePsf(java.lang.Double adminFeePsf) {
+	public void setAdminFeePsf(java.lang.String adminFeePsf) {
 		this.adminFeePsf = adminFeePsf;
 	}
 
-	public java.lang.Double getAdminFeeFlat() {
+	public java.lang.String getAdminFeeFlat() {
 		return adminFeeFlat;
 	}
 
-	public void setAdminFeeFlat(java.lang.Double adminFeeFlat) {
+	public void setAdminFeeFlat(java.lang.String adminFeeFlat) {
 		this.adminFeeFlat = adminFeeFlat;
 	}
 
-	public java.lang.Double getAdminFeePercentage() {
+	public java.lang.String getAdminFeePercentage() {
 		return adminFeePercentage;
 	}
 
-	public void setAdminFeePercentage(java.lang.Double adminFeePercentage) {
+	public void setAdminFeePercentage(java.lang.String adminFeePercentage) {
 		this.adminFeePercentage = adminFeePercentage;
 	}
 

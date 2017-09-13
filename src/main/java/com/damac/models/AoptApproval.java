@@ -3,6 +3,7 @@ package com.damac.models;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
+
 public class AoptApproval {
 	
 	    //ACTION variable
@@ -15,7 +16,7 @@ public class AoptApproval {
 		private java.lang.String firstApprovingAuthority;
 		private java.lang.String secondApprovingAuthority;
 		private java.lang.String thirdApprovingAuthority;
-		private java.lang.Double paymentDpPercentage;
+		private java.lang.String paymentDpPercentage;
 		private java.lang.String paymentGateOne;
 		private java.lang.String paymentGateTwo;
 		private java.lang.String paymentGateThree;
@@ -24,20 +25,20 @@ public class AoptApproval {
 		private java.lang.String paymentGateSix;
 		private java.lang.String paymentGateSeven;
 		private java.lang.String paymentGateOneDate;
-		private java.lang.Integer paymentGateOnePercentage;
+		private java.lang.String paymentGateOnePercentage;
 		private java.lang.String paymentGateTwoDate;
-		private java.lang.Integer paymentGateTwoPercentage;
+		private java.lang.String paymentGateTwoPercentage;
 		private java.lang.String paymentGateThreeDate;
-		private java.lang.Integer paymentGateThreePercentage;
+		private java.lang.String paymentGateThreePercentage;
 		private java.lang.String paymentGateFourDate;
-		private java.lang.Integer paymentGateFourPercentage;
-		private java.lang.Integer paymentGateCompletionPercentage;
+		private java.lang.String paymentGateFourPercentage;
+		private java.lang.String paymentGateCompletionPercentage;
 		private java.lang.String paymentGateFiveDate;
-		private java.lang.Integer paymentGateFivePercentage;
+		private java.lang.String paymentGateFivePercentage;
 		private java.lang.String paymentGateSixDate;
-		private java.lang.Integer paymentGateSixPercentage;
+		private java.lang.String paymentGateSixPercentage;
 		private java.lang.String paymentGateSevenDate;
-		private java.lang.Integer paymentGateSevenPercentage;
+		private java.lang.String paymentGateSevenPercentage;
 		
 		public AoptApproval(){
 			
@@ -115,11 +116,11 @@ public class AoptApproval {
 			this.thirdApprovingAuthority = thirdApprovingAuthority;
 		}
 
-		public java.lang.Double getPaymentDpPercentage() {
+		public java.lang.String getPaymentDpPercentage() {
 			return paymentDpPercentage;
 		}
 
-		public void setPaymentDpPercentage(java.lang.Double paymentDpPercentage) {
+		public void setPaymentDpPercentage(java.lang.String paymentDpPercentage) {
 			this.paymentDpPercentage = paymentDpPercentage;
 		}
 
@@ -187,11 +188,11 @@ public class AoptApproval {
 			this.paymentGateOneDate = paymentGateOneDate;
 		}
 
-		public java.lang.Integer getPaymentGateOnePercentage() {
+		public java.lang.String getPaymentGateOnePercentage() {
 			return paymentGateOnePercentage;
 		}
 
-		public void setPaymentGateOnePercentage(java.lang.Integer paymentGateOnePercentage) {
+		public void setPaymentGateOnePercentage(java.lang.String paymentGateOnePercentage) {
 			this.paymentGateOnePercentage = paymentGateOnePercentage;
 		}
 
@@ -203,11 +204,11 @@ public class AoptApproval {
 			this.paymentGateTwoDate = paymentGateTwoDate;
 		}
 
-		public java.lang.Integer getPaymentGateTwoPercentage() {
+		public java.lang.String getPaymentGateTwoPercentage() {
 			return paymentGateTwoPercentage;
 		}
 
-		public void setPaymentGateTwoPercentage(java.lang.Integer paymentGateTwoPercentage) {
+		public void setPaymentGateTwoPercentage(java.lang.String paymentGateTwoPercentage) {
 			this.paymentGateTwoPercentage = paymentGateTwoPercentage;
 		}
 
@@ -219,11 +220,11 @@ public class AoptApproval {
 			this.paymentGateThreeDate = paymentGateThreeDate;
 		}
 
-		public java.lang.Integer getPaymentGateThreePercentage() {
+		public java.lang.String getPaymentGateThreePercentage() {
 			return paymentGateThreePercentage;
 		}
 
-		public void setPaymentGateThreePercentage(java.lang.Integer paymentGateThreePercentage) {
+		public void setPaymentGateThreePercentage(java.lang.String paymentGateThreePercentage) {
 			this.paymentGateThreePercentage = paymentGateThreePercentage;
 		}
 
@@ -235,19 +236,19 @@ public class AoptApproval {
 			this.paymentGateFourDate = paymentGateFourDate;
 		}
 
-		public java.lang.Integer getPaymentGateFourPercentage() {
+		public java.lang.String getPaymentGateFourPercentage() {
 			return paymentGateFourPercentage;
 		}
 
-		public void setPaymentGateFourPercentage(java.lang.Integer paymentGateFourPercentage) {
+		public void setPaymentGateFourPercentage(java.lang.String paymentGateFourPercentage) {
 			this.paymentGateFourPercentage = paymentGateFourPercentage;
 		}
 
-		public java.lang.Integer getPaymentGateCompletionPercentage() {
+		public java.lang.String getPaymentGateCompletionPercentage() {
 			return paymentGateCompletionPercentage;
 		}
 
-		public void setPaymentGateCompletionPercentage(java.lang.Integer paymentGateCompletionPercentage) {
+		public void setPaymentGateCompletionPercentage(java.lang.String paymentGateCompletionPercentage) {
 			this.paymentGateCompletionPercentage = paymentGateCompletionPercentage;
 		}
 
@@ -259,11 +260,11 @@ public class AoptApproval {
 			this.paymentGateFiveDate = paymentGateFiveDate;
 		}
 
-		public java.lang.Integer getPaymentGateFivePercentage() {
+		public java.lang.String getPaymentGateFivePercentage() {
 			return paymentGateFivePercentage;
 		}
 
-		public void setPaymentGateFivePercentage(java.lang.Integer paymentGateFivePercentage) {
+		public void setPaymentGateFivePercentage(java.lang.String paymentGateFivePercentage) {
 			this.paymentGateFivePercentage = paymentGateFivePercentage;
 		}
 
@@ -275,11 +276,11 @@ public class AoptApproval {
 			this.paymentGateSixDate = paymentGateSixDate;
 		}
 
-		public java.lang.Integer getPaymentGateSixPercentage() {
+		public java.lang.String getPaymentGateSixPercentage() {
 			return paymentGateSixPercentage;
 		}
 
-		public void setPaymentGateSixPercentage(java.lang.Integer paymentGateSixPercentage) {
+		public void setPaymentGateSixPercentage(java.lang.String paymentGateSixPercentage) {
 			this.paymentGateSixPercentage = paymentGateSixPercentage;
 		}
 
@@ -291,11 +292,11 @@ public class AoptApproval {
 			this.paymentGateSevenDate = paymentGateSevenDate;
 		}
 
-		public java.lang.Integer getPaymentGateSevenPercentage() {
+		public java.lang.String getPaymentGateSevenPercentage() {
 			return paymentGateSevenPercentage;
 		}
 
-		public void setPaymentGateSevenPercentage(java.lang.Integer paymentGateSevenPercentage) {
+		public void setPaymentGateSevenPercentage(java.lang.String paymentGateSevenPercentage) {
 			this.paymentGateSevenPercentage = paymentGateSevenPercentage;
 		}
 	    
