@@ -123,7 +123,7 @@ public class TestCocd1 {
 			}
 //			Cell lastcell = currentRow.createCell(noOfVars);
 //			lastcell.setCellValue("PASSED");
-			for (int cellIndex = lastCellNum; cellIndex < noOfVars; cellIndex++) {
+			for (int cellIndex = lastCellNum; cellIndex < vars.length; cellIndex++) {
 				Cell currentCell = currentRow.getCell(cellIndex);
 				String property = BeanUtils.getProperty(result, vars[cellIndex]);
 				if(property==null) continue;
