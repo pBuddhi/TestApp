@@ -50,7 +50,7 @@ public static void test(String infile) throws IllegalAccessException, Invocation
 			noOfVars = currentRow.getLastCellNum();
 			for (int i = 1; i < noOfVars; i++) {
 				Cell currentCell = currentRow.getCell(i);
-				
+				if(currentCell==null) continue;
 				if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {
 
 					vars[i] = currentCell.getStringCellValue();

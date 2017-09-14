@@ -34,7 +34,7 @@ public class TestCocd1 {
 		Sheet sheet = workbook.getSheetAt(0);//ApachePOIExcelRead.getSheet(FILE_NAME);
 		Iterator<Row> iterator = sheet.iterator();
 
-		String vars[] = new String[noOfVars];
+		String vars[]  = null;
 
 		FileOutputStream outputStream = new FileOutputStream(infile);
 
@@ -44,15 +44,16 @@ public class TestCocd1 {
 			
 		
 		while (iterator.hasNext()) {
-			//System.out.println(rowno++);
+			System.out.println(rowno++);
 			CocdCojbNnc data = new CocdCojbNnc();
 			Row currentRow = iterator.next();
 			
 			if (currentRow.getRowNum() == 0) {
 				noOfVars = currentRow.getLastCellNum();
+				vars = new String[noOfVars];
 				for (int i = 0; i < noOfVars; i++) {
 					Cell currentCell = currentRow.getCell(i);
-
+					if(currentCell==null) continue;
 					if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {
 
 						vars[i] = currentCell.getStringCellValue();
