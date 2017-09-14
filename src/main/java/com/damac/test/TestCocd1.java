@@ -47,9 +47,9 @@ public class TestCocd1 {
 			//System.out.println(rowno++);
 			CocdCojbNnc data = new CocdCojbNnc();
 			Row currentRow = iterator.next();
-
+			
 			if (currentRow.getRowNum() == 0) {
-
+				noOfVars = currentRow.getLastCellNum();
 				for (int i = 0; i < noOfVars; i++) {
 					Cell currentCell = currentRow.getCell(i);
 

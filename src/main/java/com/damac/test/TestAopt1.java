@@ -47,10 +47,10 @@ public static void test(String infile) throws IllegalAccessException, Invocation
 		Row currentRow = iterator.next();
 
 		if (currentRow.getRowNum() == 0) {
-
+			noOfVars = currentRow.getLastCellNum();
 			for (int i = 1; i < noOfVars; i++) {
 				Cell currentCell = currentRow.getCell(i);
-
+				
 				if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {
 
 					vars[i] = currentCell.getStringCellValue();

@@ -47,7 +47,7 @@ public static void test(String infile, String outfile) throws IllegalAccessExcep
 		Row currentRow = iterator.next();
 
 		if (currentRow.getRowNum() == 0) {
-
+			noOfVars = currentRow.getLastCellNum();
 			for (int i = 1; i < noOfVars; i++) {
 				Cell currentCell = currentRow.getCell(i);
 

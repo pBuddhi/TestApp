@@ -58,7 +58,7 @@ public class TestAssignment1 {
 			Row currentRow = iterator.next();
 
 			if (currentRow.getRowNum() == 0) {
-
+				noOfVars = currentRow.getLastCellNum();
 				for (int i = 0; i < noOfVars; i++) {
 					Cell currentCell = currentRow.getCell(i);
 
