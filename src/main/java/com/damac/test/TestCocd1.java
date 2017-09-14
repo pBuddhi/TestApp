@@ -16,6 +16,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 import com.damac.models.CocdCojbNnc;
 import com.damac.models.CocdCojbNncApproval;
+import com.damac.models.tere;
 import com.damac.utils.ApachePOIExcelRead;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -24,7 +25,7 @@ import com.sun.jersey.api.client.WebResource;
 
 public class TestCocd1 {
 	public static void test(String infile) throws Exception {
-		String REST_URI = "http://148.251.21.232:8085/droolwebservice/api";
+		String REST_URI = tere.REST_URI;
 
 		int noOfVars = 32;
 

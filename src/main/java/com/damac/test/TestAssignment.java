@@ -16,6 +16,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 import com.damac.models.Assignment;
 import com.damac.models.AssignmentApproval;
+import com.damac.models.tere;
 import com.damac.utils.ApachePOIExcelRead;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -24,7 +25,7 @@ import com.sun.jersey.api.client.WebResource;
 
 public class TestAssignment {
 	public static void test(String infile, String outfile) throws IllegalAccessException, InvocationTargetException, NoSuchMethodException, IOException {
-		String REST_URI = "http://148.251.80.49:8080/droolwebservice/api";
+		String REST_URI = tere.REST_URI;
 
 		int noOfVars = 78;
 

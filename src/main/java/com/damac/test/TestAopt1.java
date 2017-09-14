@@ -16,6 +16,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 import com.damac.models.Aopt;
 import com.damac.models.AoptApproval;
+import com.damac.models.tere;
 import com.damac.utils.ApachePOIExcelRead;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -25,8 +26,8 @@ import com.sun.jersey.api.client.config.DefaultClientConfig;
 
 public class TestAopt1 {
 public static void test(String infile) throws IllegalAccessException, InvocationTargetException, NoSuchMethodException, IOException {
-	String REST_URI = "http://148.251.21.232:8085/droolwebservice/api";
-
+	//String REST_URI = "http://148.251.21.232:8085/droolwebservice/api";
+	String REST_URI = tere.REST_URI;
 	int noOfVars = 77;
 
 	String FILE_NAME = infile;
