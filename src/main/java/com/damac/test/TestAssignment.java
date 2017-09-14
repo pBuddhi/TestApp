@@ -41,7 +41,7 @@ public class TestAssignment {
 
 		int rowno = 0;
 		while (iterator.hasNext()) {
-			//System.out.println(rowno++);
+			System.out.println(rowno++);
 			Assignment data = new Assignment();
 			Row currentRow = iterator.next();
 

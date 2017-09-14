@@ -29,15 +29,17 @@ public class TestAssignment1 {
 
 		int noOfVars = 78;
 		int lastCellNum = 40;
-		if(infile.equals("assignment_approvals.xlsx")){
+		String words[] = infile.split("\\\\");
+		
+		if(words[words.length-1].equals("assignment_approvals.xlsx")){
 			lastCellNum = 45;
 			noOfVars = 57;
 		}
-		else if(infile.equals("assignment_documents.xlsx")){
+		else if(words[words.length-1].equals("assignment_documents.xlsx")){
 			lastCellNum = 40;
 			noOfVars = 81;
 		}
-		else if(infile.equals("assignment_fees.xlsx")){
+		else if(words[words.length-1].equals("assignment_fees.xlsx")){
 			lastCellNum = 38;
 			noOfVars = 46;
 		}
@@ -53,12 +55,12 @@ public class TestAssignment1 {
 
 		int rowno = 0;
 		while (iterator.hasNext()) {
-			//System.out.println(rowno++);
+			System.out.println(rowno++);
 			Assignment data = new Assignment();
 			Row currentRow = iterator.next();
 
 			if (currentRow.getRowNum() == 0) {
-				noOfVars = currentRow.getLastCellNum();
+				//noOfVars = currentRow.getLastCellNum();
 				for (int i = 0; i < noOfVars; i++) {
 					Cell currentCell = currentRow.getCell(i);
 					if(currentCell==null) continue;
