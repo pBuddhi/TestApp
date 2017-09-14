@@ -25,7 +25,7 @@ import com.sun.jersey.api.client.config.DefaultClientConfig;
 
 public class TestAopt1 {
 public static void test(String infile) throws IllegalAccessException, InvocationTargetException, NoSuchMethodException, IOException {
-	String REST_URI = "http://148.251.80.49:8080/droolwebservice/api";
+	String REST_URI = "http://148.251.21.232:8085/droolwebservice/api";
 
 	int noOfVars = 77;
 

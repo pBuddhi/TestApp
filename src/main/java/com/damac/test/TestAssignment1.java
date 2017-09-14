@@ -24,10 +24,22 @@ import com.sun.jersey.api.client.WebResource;
 
 public class TestAssignment1 {
 	public static void test(String infile) throws IllegalAccessException, InvocationTargetException, NoSuchMethodException, IOException {
-		String REST_URI = "http://148.251.80.49:8080/droolwebservice/api";
+		String REST_URI = "http://148.251.21.232:8085/droolwebservice/api";
 
 		int noOfVars = 78;
-
+		int lastCellNum = 40;
+		if(infile.equals("assignment_approvals.xlsx")){
+			lastCellNum = 45;
+			noOfVars = 57;
+		}
+		else if(infile.equals("assignment_documents.xlsx")){
+			lastCellNum = 40;
+			noOfVars = 81;
+		}
+		else if(infile.equals("assignment_fees.xlsx")){
+			lastCellNum = 38;
+			noOfVars = 46;
+		}
 		String FILE_NAME = infile;
 		Workbook workbook = ApachePOIExcelRead.getBook(FILE_NAME);
 		Sheet sheet = workbook.getSheetAt(0);//ApachePOIExcelRead.getSheet(FILE_NAME);
@@ -64,27 +76,18 @@ public class TestAssignment1 {
 			if (ApachePOIExcelRead.isRowEmpty(currentRow))
 				break;
 
-			int lastCellNum = 40;
+			
 			for (int cellIndex = 0; cellIndex < lastCellNum; cellIndex++) {
 
 				Cell currentCell = currentRow.getCell(cellIndex);
-				//System.out.print(cellIndex +" ");
+				//// System.out.println(cellIndex);
 				if(currentCell==null) continue;
 				if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {
-					Class datatype = PropertyUtils.getPropertyType(data, vars[cellIndex]);
-					if(datatype.getName() == "java.lang.String"){
-						BeanUtils.setProperty(data, vars[cellIndex], currentCell.getStringCellValue());
-						//System.out.println(vars[cellIndex] +" : \""+BeanUtils.getProperty(data, vars[cellIndex])+"\"");
-					}
-					else if(datatype.getName() == "java.lang.Boolean"){
-						String inString = currentCell.getStringCellValue();
-						if(inString.equals("Yes")|| inString.equals("yes")) BeanUtils.setProperty(data, vars[cellIndex], true);
-						else BeanUtils.setProperty(data, vars[cellIndex], false);
-						//System.out.println(vars[cellIndex] +" : "+BeanUtils.getProperty(data, vars[cellIndex]));
-					}
+					//// System.out.println(vars[cellIndex])
+					BeanUtils.setProperty(data, vars[cellIndex], currentCell.getStringCellValue());
 
 				} else if (currentCell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-//					System.out.println("numeric "+vars[cellIndex]);
+					// System.out.println("numeric "+vars[cellIndex]);
 					Class datatype = PropertyUtils.getPropertyType(data, vars[cellIndex]);
 					// // System.out.println(datatype.getName());
 					if (datatype.getName() == "java.lang.Integer") {
@@ -95,15 +98,17 @@ public class TestAssignment1 {
 						Double it = Double.valueOf((double) currentCell.getNumericCellValue());
 						BeanUtils.setProperty(data, vars[cellIndex], it);
 						// System.out.println(BeanUtils.getProperty(data,vars[cellIndex]));
-					}else if(datatype.getName() == "java.lang.String"){
-						Double it = currentCell.getNumericCellValue();
-						Integer myint = it.intValue();
-						String vall = myint.toString();
-						BeanUtils.setProperty(data, vars[cellIndex],vall);
+					}else if (datatype.getName() == "int") {
+						int it=(int) currentCell.getNumericCellValue();
+						BeanUtils.setProperty(data, vars[cellIndex], it);
+						// System.out.println(BeanUtils.getProperty(data,vars[cellIndex]));
+					}else if (datatype.getName() == "double") {
+						double it = (double)currentCell.getNumericCellValue();
+						BeanUtils.setProperty(data, vars[cellIndex], it);
+						// System.out.println(BeanUtils.getProperty(data,vars[cellIndex]));
 					}
-					//System.out.println(vars[cellIndex] +" : "+BeanUtils.getProperty(data, vars[cellIndex]));
-				}
 
+				}
 			}
 //			data.setPcc(false);
 			AssignmentApproval result = null;
@@ -126,13 +131,16 @@ public class TestAssignment1 {
 			}
 //			Cell lastcell = currentRow.createCell(noOfVars);
 //			lastcell.setCellValue("PASSED");
-			for (int cellIndex = lastCellNum; cellIndex < noOfVars; cellIndex++) {
+			for (int cellIndex = lastCellNum; cellIndex < vars.length; cellIndex++) {
 				 //System.out.print(cellIndex+" "+vars[cellIndex]+" ");
 				Cell currentCell = currentRow.getCell(cellIndex);
-				// System.out.println(currentCell.getCellType());
-				if(currentCell==null) continue;
 				String property = BeanUtils.getProperty(result, vars[cellIndex]);
-				currentCell.setCellValue(property);
+				if(property==null) continue;
+				if(currentCell==null){
+					Cell lastcell = currentRow.createCell(cellIndex);
+					lastcell.setCellValue(property);
+				}else
+					currentCell.setCellValue(property);
 //				if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {
 //
 //					// System.out.println(vars[cellIndex]);

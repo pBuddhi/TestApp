@@ -24,7 +24,7 @@ import com.sun.jersey.api.client.WebResource;
 
 public class TestCocd1 {
 	public static void test(String infile) throws Exception {
-		String REST_URI = "http://148.251.80.49:8080/droolwebservice/api";
+		String REST_URI = "http://148.251.21.232:8085/droolwebservice/api";
 
 		int noOfVars = 32;
 
