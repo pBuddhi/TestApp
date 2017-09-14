@@ -71,27 +71,14 @@ public class TestCocd1 {
 			for (int cellIndex = 1; cellIndex < lastCellNum; cellIndex++) {
 
 				Cell currentCell = currentRow.getCell(cellIndex);
-				//System.out.print(cellIndex +" ");
+				//// System.out.println(cellIndex);
 				if(currentCell==null) continue;
 				if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {
-					Class datatype = PropertyUtils.getPropertyType(data, vars[cellIndex]);
-					if(datatype.getName() == "java.lang.String"){
-						BeanUtils.setProperty(data, vars[cellIndex], currentCell.getStringCellValue());
-						//System.out.println(vars[cellIndex] +" : \""+BeanUtils.getProperty(data, vars[cellIndex])+"\"");
-					}
-					else if(datatype.getName() == "java.lang.Boolean"){
-						String inString = currentCell.getStringCellValue();
-						if(inString.equals("Yes")|| inString.equals("yes")){
-							BeanUtils.setProperty(data, vars[cellIndex], true);
-						}
-						else {
-							BeanUtils.setProperty(data, vars[cellIndex], false);
-						}
-						//System.out.println(vars[cellIndex] +" : \""+BeanUtils.getProperty(data, vars[cellIndex])+"\"");
-					}
-					//System.out.println(vars[cellIndex] +" : \""+BeanUtils.getProperty(data, vars[cellIndex])+"\"");
+					//// System.out.println(vars[cellIndex])
+					BeanUtils.setProperty(data, vars[cellIndex], currentCell.getStringCellValue());
+
 				} else if (currentCell.getCellType() == Cell.CELL_TYPE_NUMERIC) {
-//					System.out.println("numeric "+vars[cellIndex]);
+					// System.out.println("numeric "+vars[cellIndex]);
 					Class datatype = PropertyUtils.getPropertyType(data, vars[cellIndex]);
 					// // System.out.println(datatype.getName());
 					if (datatype.getName() == "java.lang.Integer") {
@@ -102,11 +89,14 @@ public class TestCocd1 {
 						Double it = Double.valueOf((double) currentCell.getNumericCellValue());
 						BeanUtils.setProperty(data, vars[cellIndex], it);
 						// System.out.println(BeanUtils.getProperty(data,vars[cellIndex]));
-					}else if(datatype.getName() == "java.lang.String"){
-						Double it = currentCell.getNumericCellValue();
-						Integer myint = it.intValue();
-						String vall = myint.toString();
-						BeanUtils.setProperty(data, vars[cellIndex],vall);
+					}else if (datatype.getName() == "int") {
+						int it=(int) currentCell.getNumericCellValue();
+						BeanUtils.setProperty(data, vars[cellIndex], it);
+						// System.out.println(BeanUtils.getProperty(data,vars[cellIndex]));
+					}else if (datatype.getName() == "double") {
+						double it = (double)currentCell.getNumericCellValue();
+						BeanUtils.setProperty(data, vars[cellIndex], it);
+						// System.out.println(BeanUtils.getProperty(data,vars[cellIndex]));
 					}
 					//System.out.println(vars[cellIndex] +" : "+BeanUtils.getProperty(data, vars[cellIndex]));
 				}
@@ -134,12 +124,14 @@ public class TestCocd1 {
 //			Cell lastcell = currentRow.createCell(noOfVars);
 //			lastcell.setCellValue("PASSED");
 			for (int cellIndex = lastCellNum; cellIndex < noOfVars; cellIndex++) {
-				 //System.out.print(cellIndex+" "+vars[cellIndex]+" ");
 				Cell currentCell = currentRow.getCell(cellIndex);
-				// System.out.println(currentCell.getCellType());
-				if(currentCell==null) continue;
 				String property = BeanUtils.getProperty(result, vars[cellIndex]);
-				currentCell.setCellValue(property);
+				if(property==null) continue;
+				if(currentCell==null){
+					Cell lastcell = currentRow.createCell(cellIndex);
+					lastcell.setCellValue(property);
+				}else
+					currentCell.setCellValue(property);
 //				if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {
 //
 //					// System.out.println(vars[cellIndex]);
