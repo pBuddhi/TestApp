@@ -125,7 +125,11 @@ public static void test(String infile) throws IllegalAccessException, Invocation
 			Cell currentCell = currentRow.getCell(cellIndex);
 			String property = BeanUtils.getProperty(result, vars[cellIndex]);
 			if(property==null) continue;
-			currentCell.setCellValue(property);
+			if(currentCell==null){
+				Cell lastcell = currentRow.createCell(cellIndex);
+				lastcell.setCellValue(property);
+			}else
+				currentCell.setCellValue(property);
 			// System.out.println(currentCell.getCellType());
 //			if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {
 //
