@@ -177,7 +177,7 @@ public class UploadServlet1 extends HttpServlet {
 			}
 		}
 		catch(Exception e){
-			
+			e.printStackTrace();
 		}
 		request.setAttribute("fileName", fileName);
 

@@ -87,7 +87,16 @@ public static void test(String infile) throws IllegalAccessException, Invocation
 					Double it = Double.valueOf((double) currentCell.getNumericCellValue());
 					BeanUtils.setProperty(data, vars[cellIndex], it);
 					// System.out.println(BeanUtils.getProperty(data,vars[cellIndex]));
+				}else if (datatype.getName() == "int") {
+					int it=(int) currentCell.getNumericCellValue();
+					BeanUtils.setProperty(data, vars[cellIndex], it);
+					// System.out.println(BeanUtils.getProperty(data,vars[cellIndex]));
+				}else if (datatype.getName() == "double") {
+					double it = (double)currentCell.getNumericCellValue();
+					BeanUtils.setProperty(data, vars[cellIndex], it);
+					// System.out.println(BeanUtils.getProperty(data,vars[cellIndex]));
 				}
+
 			}
 
 		}
@@ -111,11 +120,11 @@ public static void test(String infile) throws IllegalAccessException, Invocation
 		}
 //		Cell lastcell = currentRow.createCell(currentRow.getLastCellNum());
 //		lastcell.setCellValue("PASSED");
-		for (int cellIndex = lastCellNum; cellIndex < currentRow.getLastCellNum(); cellIndex++) {
+		for (int cellIndex = lastCellNum; cellIndex < vars.length; cellIndex++) {
 			//// System.out.println(cellIndex);
 			Cell currentCell = currentRow.getCell(cellIndex);
-			if(currentCell==null) continue;
 			String property = BeanUtils.getProperty(result, vars[cellIndex]);
+			if(property==null) continue;
 			currentCell.setCellValue(property);
 			// System.out.println(currentCell.getCellType());
 //			if (currentCell.getCellType() == Cell.CELL_TYPE_STRING) {

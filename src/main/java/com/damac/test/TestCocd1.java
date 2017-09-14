@@ -23,7 +23,7 @@ import com.sun.jersey.api.client.WebResource;
 
 
 public class TestCocd1 {
-	public static void test(String infile) throws IllegalAccessException, InvocationTargetException, NoSuchMethodException, IOException {
+	public static void test(String infile) throws Exception {
 		String REST_URI = "http://148.251.80.49:8080/droolwebservice/api";
 
 		int noOfVars = 32;
@@ -39,6 +39,9 @@ public class TestCocd1 {
 
 
 		int rowno = 0;
+		try{
+			
+		
 		while (iterator.hasNext()) {
 			//System.out.println(rowno++);
 			CocdCojbNnc data = new CocdCojbNnc();
@@ -174,6 +177,12 @@ public class TestCocd1 {
 //					}
 //				}
 			}
+		}
+		}catch (Exception e) {
+			workbook.write(outputStream);
+			workbook.close();
+			outputStream.close();
+			throw new Exception(e);
 		}
 		workbook.write(outputStream);
 		workbook.close();
