@@ -23,6 +23,7 @@ import com.damac.test.TestAssignment;
 import com.damac.test.TestAssignment1;
 import com.damac.test.TestCocd;
 import com.damac.test.TestCocd1;
+import com.damac.test.TestPenaltyWaiver1;
 import com.damac.test.TestRefund1;
 import com.damac.test.TestTitleDeed1;
 
@@ -182,6 +183,9 @@ public class UploadServlet1 extends HttpServlet {
 			}
 			else if(processName.toLowerCase().equals("refund")){
 				TestRefund1.test(savePath+File.separator + fileName);
+			}
+			else if(processName.toLowerCase().equals("penaltywaiver")){
+				TestPenaltyWaiver1.test(savePath+File.separator + fileName);
 			}
 		}
 		catch(Exception e){
