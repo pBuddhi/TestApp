@@ -9,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.PropertyUtils;
+import org.apache.commons.collections4.iterators.PeekingIterator;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -16,6 +17,10 @@ import org.apache.poi.ss.usermodel.Workbook;
 
 import com.damac.models.Aopt;
 import com.damac.models.AoptApproval;
+import com.damac.models.PenaltyWaiver;
+import com.damac.models.PenaltyWaiverApproval;
+import com.damac.models.TokenRefundsOrTransfer;
+import com.damac.models.TokenRefundsOrTransferApproval;
 import com.damac.models.tere;
 import com.damac.utils.ApachePOIExcelRead;
 import com.sun.jersey.api.client.Client;
@@ -24,12 +29,13 @@ import com.sun.jersey.api.client.WebResource;
 import com.sun.jersey.api.client.config.ClientConfig;
 import com.sun.jersey.api.client.config.DefaultClientConfig;
 
-public class TestAopt1 {
-public static void test(String infile) throws Exception {
+public class TestPenaltyWaiver1 {
+public static void test(String infile) throws IllegalAccessException, InvocationTargetException, NoSuchMethodException, IOException {
 	//String REST_URI = "http://148.251.21.232:8085/droolwebservice/api";
 	String REST_URI = tere.REST_URI;
-	int noOfVars = 77;
-
+	int noOfVars = 35;
+	int lastCellNum = 47;
+	
 	String FILE_NAME = infile;
 	Workbook workbook = ApachePOIExcelRead.getBook(FILE_NAME);
 	Sheet sheet = workbook.getSheetAt(0);//ApachePOIExcelRead.getSheet(FILE_NAME);
@@ -41,10 +47,9 @@ public static void test(String infile) throws Exception {
 	
 	
 	int rowno = 0;
-	try{
 	while (iterator.hasNext()) {
 		System.out.println(rowno++);
-		Aopt data = new Aopt();
+		PenaltyWaiver data = new PenaltyWaiver();
 		Row currentRow = iterator.next();
 
 		if (currentRow.getRowNum() == 0) {
@@ -67,7 +72,7 @@ public static void test(String infile) throws Exception {
 		if (ApachePOIExcelRead.isRowEmpty(currentRow))
 			break;
 
-		int lastCellNum = 45;
+		
 		for (int cellIndex = 1; cellIndex < lastCellNum; cellIndex++) {
 
 			Cell currentCell = currentRow.getCell(cellIndex);
@@ -103,16 +108,16 @@ public static void test(String infile) throws Exception {
 
 		}
 
-		AoptApproval result = null;
+		PenaltyWaiverApproval result = null;
 
 		try {
 			
 			Client client = Client.create();
-			WebResource webResource = client.resource(REST_URI).path("approval").path("aopt");
+			WebResource webResource = client.resource(REST_URI).path("approval").path("tokenrefundsortransfer");
 			ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
 					.accept(MediaType.APPLICATION_JSON).post(ClientResponse.class, data);
 			if (response.getStatus() == 201) {
-				result = response.getEntity(AoptApproval.class);
+				result = response.getEntity(PenaltyWaiverApproval.class);
 			} else {
 				response.close();
 				throw new RuntimeException("Failed : HTTP error code : " + response.getStatus());
@@ -170,12 +175,6 @@ public static void test(String infile) throws Exception {
 //				}
 //			}
 		}
-	}
-}catch (Exception e) {
-		workbook.write(outputStream);
-		workbook.close();
-		outputStream.close();
-		throw new Exception(e);
 	}
 	workbook.write(outputStream);
 	workbook.close();

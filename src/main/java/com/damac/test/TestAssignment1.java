@@ -24,7 +24,7 @@ import com.sun.jersey.api.client.WebResource;
 
 
 public class TestAssignment1 {
-	public static void test(String infile) throws IllegalAccessException, InvocationTargetException, NoSuchMethodException, IOException {
+	public static void test(String infile) throws Exception {
 		String REST_URI = tere.REST_URI;
 
 		int noOfVars = 78;
@@ -54,6 +54,7 @@ public class TestAssignment1 {
 
 
 		int rowno = 0;
+		try{
 		while (iterator.hasNext()) {
 			System.out.println(rowno++);
 			Assignment data = new Assignment();
@@ -181,6 +182,12 @@ public class TestAssignment1 {
 //					}
 //				}
 			}
+		}
+		}catch (Exception e) {
+			workbook.write(outputStream);
+			workbook.close();
+			outputStream.close();
+			throw new Exception(e);
 		}
 		workbook.write(outputStream);
 		workbook.close();
