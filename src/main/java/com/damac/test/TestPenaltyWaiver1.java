@@ -33,8 +33,8 @@ public class TestPenaltyWaiver1 {
 public static void test(String infile) throws IllegalAccessException, InvocationTargetException, NoSuchMethodException, IOException {
 	//String REST_URI = "http://148.251.21.232:8085/droolwebservice/api";
 	String REST_URI = tere.REST_URI;
-	int noOfVars = 35;
-	int lastCellNum = 47;
+	int noOfVars = 47;
+	int lastCellNum = 35;
 	
 	String FILE_NAME = infile;
 	Workbook workbook = ApachePOIExcelRead.getBook(FILE_NAME);
@@ -53,7 +53,7 @@ public static void test(String infile) throws IllegalAccessException, Invocation
 		Row currentRow = iterator.next();
 
 		if (currentRow.getRowNum() == 0) {
-			noOfVars = currentRow.getLastCellNum();
+//			noOfVars = currentRow.getLastCellNum();
 			for (int i = 1; i < noOfVars; i++) {
 				Cell currentCell = currentRow.getCell(i);
 				if(currentCell==null) continue;
@@ -113,7 +113,7 @@ public static void test(String infile) throws IllegalAccessException, Invocation
 		try {
 			
 			Client client = Client.create();
-			WebResource webResource = client.resource(REST_URI).path("approval").path("tokenrefundsortransfer");
+			WebResource webResource = client.resource(REST_URI).path("approval").path("penaltywaiver");
 			ClientResponse response = webResource.type(MediaType.APPLICATION_JSON)
 					.accept(MediaType.APPLICATION_JSON).post(ClientResponse.class, data);
 			if (response.getStatus() == 201) {
