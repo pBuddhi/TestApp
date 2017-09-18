@@ -51,7 +51,7 @@ public class Assignment implements java.io.Serializable{
 	private boolean nocIssuanceInLastFifteenDays;
 	private boolean pcc;
 	private int purchaserAgeYears;
-	private java.lang.String waiverPercentage;
+	private double waiverPercentage;
 	private java.lang.String tempA;
 	private java.lang.String tempB;
 	private java.lang.String tempC;
@@ -528,12 +528,12 @@ public class Assignment implements java.io.Serializable{
 	}
 
     	
-	public java.lang.String getWaiverPercentage() {
+	public double getWaiverPercentage() {
 		return waiverPercentage;
 	}
 
 
-	public void setWaiverPercentage(java.lang.String waiverPercentage) {
+	public void setWaiverPercentage(double waiverPercentage) {
 		this.waiverPercentage = waiverPercentage;
 	}
 
@@ -1098,7 +1098,7 @@ public class Assignment implements java.io.Serializable{
 			boolean mortgage, boolean underAssignment, java.lang.String readyOffPlan, boolean eho, boolean rentalPool, boolean ho,
 			java.lang.String applicableNationality, boolean poa, boolean poaAssigner, boolean poaAssignor,
 			boolean courtOrderForDeceasedCase, boolean deceasedCase, boolean nocIssuanceInLastFifteenDays, boolean pcc,
-			int purchaserAgeYears, java.lang.String waiverPercentage, java.lang.String tempA, java.lang.String tempB, java.lang.String tempC, java.lang.String allowed, java.lang.String message,
+			int purchaserAgeYears, double waiverPercentage, java.lang.String tempA, java.lang.String tempB, java.lang.String tempC, java.lang.String allowed, java.lang.String message,
 			java.lang.String recommendingAuthorityOne, java.lang.String recommendingAuthorityTwo, java.lang.String recommendingAuthorityThree,
 			java.lang.String recommendingAuthorityFour, java.lang.String approvingAuthorityOne, java.lang.String approvingAuthorityTwo,
 			java.lang.String approvingAuthorityThree, java.lang.String tempOne, java.lang.String tempTwo, java.lang.String tempThree, java.lang.String adminFeePsf,

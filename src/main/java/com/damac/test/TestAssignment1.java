@@ -32,8 +32,8 @@ public class TestAssignment1 {
 		String words[] = infile.split("\\\\");
 		
 		if(words[words.length-1].equals("assignment_approvals.xlsx")){
-			lastCellNum = 45;
-			noOfVars = 57;
+			lastCellNum = 38;
+			noOfVars = 50;
 		}
 		else if(words[words.length-1].equals("assignment_documents.xlsx")){
 			lastCellNum = 40;
